@@ -1,6 +1,6 @@
-FROM unidata/tomcat-docker:9.0-jdk11
+FROM nriet/tomcat:9.0-jdk11-thredds
 
-MAINTAINER Unidata
+MAINTAINER axiu
 
 USER root
 
