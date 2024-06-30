@@ -3,7 +3,7 @@ name: Publish Docker image   # workflow名称，可以在Github项目主页的�
 env:
   APP_NAME: thredds
   DOCKERHUB_REPO: nriet/thredds
-  APP_VERSION: 5.4
+  APP_VERSION: 5.5-SNAPSHOT
 on:   # 配置触发workflow的事件
   push:
     branches:   # master分支有push时触发此workflow
