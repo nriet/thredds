@@ -37,12 +37,12 @@ RUN apt-get update && \
     ./configure --prefix=/usr/local && \
     make && make install && \
     cd .. && rm -rf zlib-${ZLIB_VERSION} && \
-    # hdf
-    curl https://support.hdfgroup.org/ftp/HDF5/releases/${HDF5_VER%.*}/${HDF5_VER}/src/${HDF5_FILE} | tar xz && \
-    cd hdf5-${HDF5_VERSION} && \
-    ./configure --with-zlib=${ZDIR} --prefix=${H5DIR} --enable-threadsafe --with-pthread=${PDIR} --enable-unsupported --prefix=/usr/local && \
-    make && make check && make install && make check-install && ldconfig && \
-    cd .. && rm -rf hdf5-${HDF5_VERSION} && \
+    # # hdf
+    # curl https://support.hdfgroup.org/ftp/HDF5/releases/${HDF5_VER%.*}/${HDF5_VER}/src/${HDF5_FILE} | tar xz && \
+    # cd hdf5-${HDF5_VERSION} && \
+    # ./configure --with-zlib=${ZDIR} --prefix=${H5DIR} --enable-threadsafe --with-pthread=${PDIR} --enable-unsupported --prefix=/usr/local && \
+    # make && make check && make install && make check-install && ldconfig && \
+    # cd .. && rm -rf hdf5-${HDF5_VERSION} && \
     # netcdf
     export CPPFLAGS=-I/usr/local/include \
     LDFLAGS=-L/usr/local/lib && \
