@@ -27,8 +27,8 @@ COPY files/javaopts.sh ${CATALINA_HOME}/bin/javaopts.sh
 
 # Install necessary packages
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends  vim build-essential m4 \
-        libpthread-stubs0-dev libcurl4-openssl-dev gosu zip unzip && \
+    # apt-get install -y --no-install-recommends  vim build-essential m4 \
+    #     libpthread-stubs0-dev libcurl4-openssl-dev gosu zip unzip && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* && \
     # zlib
