@@ -50,13 +50,7 @@ RUN apt-get update && \
     cd netcdf-c-${NETCDF_VERSION} && \
     ./configure --disable-dap-remote-tests --disable-libxml2 --prefix=/usr/local && \
     make check && make install && ldconfig && \
-    cd .. && rm -rf netcdf-c-${NETCDF_VERSION} && \
-    # thredds
-    curl -fSL "${THREDDS_WAR_URL}" -o thredds.war && \
-    unzip thredds.war -d ${CATALINA_HOME}/webapps/thredds/ && \
-    rm -f thredds.war && \
-    mkdir -p ${CATALINA_HOME}/content/thredds && \
-    chmod 755 ${CATALINA_HOME}/bin/*.sh 
+    cd .. && rm -rf netcdf-c-${NETCDF_VERSION} 
 
 EXPOSE 8080 8443
 
