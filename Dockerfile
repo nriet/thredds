@@ -34,10 +34,7 @@ RUN apt-get update && \
     # thredds
     curl -fSL "${THREDDS_WAR_URL}" -o thredds.war && \
     unzip thredds.war -d ${CATALINA_HOME}/webapps/thredds/ && \
-    rm -f thredds.war && \
-    mkdir -p ${CATALINA_HOME}/content/thredds && \
-    chmod 755 ${CATALINA_HOME}/bin/*.sh && \
-    mkdir -p ${CATALINA_HOME}/javaUtilPrefs/.systemPrefs
+    rm -f thredds.war 
 
 EXPOSE 8080 8443
 
