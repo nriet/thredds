@@ -5,15 +5,15 @@ MAINTAINER axiu
 USER root
 
 # netcdf envs
-ENV LD_LIBRARY_PATH /usr/local/lib:${LD_LIBRARY_PATH}
-ENV HDF5_VERSION 1.12.2
-ENV ZLIB_VERSION 1.2.9
-ENV NETCDF_VERSION 4.9.2
-ENV ZDIR /usr/local
-ENV H5DIR /usr/local
-ENV PDIR /usr
-ENV HDF5_VER hdf5-${HDF5_VERSION}
-ENV HDF5_FILE ${HDF5_VER}.tar.gz
+# ENV LD_LIBRARY_PATH /usr/local/lib:${LD_LIBRARY_PATH}
+# ENV HDF5_VERSION 1.12.2
+# ENV ZLIB_VERSION 1.2.9
+# ENV NETCDF_VERSION 4.9.2
+# ENV ZDIR /usr/local
+# ENV H5DIR /usr/local
+# ENV PDIR /usr
+# ENV HDF5_VER hdf5-${HDF5_VERSION}
+# ENV HDF5_FILE ${HDF5_VER}.tar.gz
 # tds envs
 ENV TDS_CONTENT_ROOT_PATH /usr/local/tomcat/content
 ENV THREDDS_XMX_SIZE 4G
@@ -32,11 +32,11 @@ RUN apt-get update && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* && \
     # zlib
-    curl https://zlib.net/fossils/zlib-${ZLIB_VERSION}.tar.gz | tar xz && \
-    cd zlib-${ZLIB_VERSION} && \
-    ./configure --prefix=/usr/local && \
-    make && make install && \
-    cd .. && rm -rf zlib-${ZLIB_VERSION} && \
+    # curl https://zlib.net/fossils/zlib-${ZLIB_VERSION}.tar.gz | tar xz && \
+    # cd zlib-${ZLIB_VERSION} && \
+    # ./configure --prefix=/usr/local && \
+    # make && make install && \
+    # cd .. && rm -rf zlib-${ZLIB_VERSION} && \
     # # hdf
     # curl https://support.hdfgroup.org/ftp/HDF5/releases/${HDF5_VER%.*}/${HDF5_VER}/src/${HDF5_FILE} | tar xz && \
     # cd hdf5-${HDF5_VERSION} && \
