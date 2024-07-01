@@ -44,13 +44,13 @@ RUN apt-get update && \
     # make && make check && make install && make check-install && ldconfig && \
     # cd .. && rm -rf hdf5-${HDF5_VERSION} && \
     # netcdf
-    export CPPFLAGS=-I/usr/local/include \
-    LDFLAGS=-L/usr/local/lib && \
-    curl https://downloads.unidata.ucar.edu/netcdf-c/${NETCDF_VERSION}/netcdf-c-${NETCDF_VERSION}.tar.gz | tar xz && \
-    cd netcdf-c-${NETCDF_VERSION} && \
-    ./configure --disable-dap-remote-tests --disable-libxml2 --prefix=/usr/local && \
-    make check && make install && ldconfig && \
-    cd .. && rm -rf netcdf-c-${NETCDF_VERSION} && \
+    # export CPPFLAGS=-I/usr/local/include \
+    # LDFLAGS=-L/usr/local/lib && \
+    # curl https://downloads.unidata.ucar.edu/netcdf-c/${NETCDF_VERSION}/netcdf-c-${NETCDF_VERSION}.tar.gz | tar xz && \
+    # cd netcdf-c-${NETCDF_VERSION} && \
+    # ./configure --disable-dap-remote-tests --disable-libxml2 --prefix=/usr/local && \
+    # make check && make install && ldconfig && \
+    # cd .. && rm -rf netcdf-c-${NETCDF_VERSION} && \
     # thredds
     curl -fSL "${THREDDS_WAR_URL}" -o thredds.war && \
     unzip thredds.war -d ${CATALINA_HOME}/webapps/thredds/ && \
