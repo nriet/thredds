@@ -56,8 +56,7 @@ RUN apt-get update && \
     unzip thredds.war -d ${CATALINA_HOME}/webapps/thredds/ && \
     rm -f thredds.war && \
     mkdir -p ${CATALINA_HOME}/content/thredds && \
-    chmod 755 ${CATALINA_HOME}/bin/*.sh && \
-    mkdir -p ${CATALINA_HOME}/javaUtilPrefs/.systemPrefs
+    chmod 755 ${CATALINA_HOME}/bin/*.sh 
 
 EXPOSE 8080 8443
 
