@@ -32,9 +32,7 @@ RUN apt-get update && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* && \
     # thredds
-    curl -fSL "${THREDDS_WAR_URL}" -o thredds.war && \
-    unzip thredds.war -d ${CATALINA_HOME}/webapps/thredds/ && \
-    rm -f thredds.war 
+    curl -fSL "${THREDDS_WAR_URL}" -o thredds.war 
 
 EXPOSE 8080 8443
 
