@@ -18,7 +18,7 @@ USER root
 ENV TDS_CONTENT_ROOT_PATH /usr/local/tomcat/content
 ENV THREDDS_XMX_SIZE 4G
 ENV THREDDS_XMS_SIZE 4G
-ENV THREDDS_WAR_URL https://github.com/nriet/thredds/releases/download/5.6-SNAPSHOT/thredds-5.6-SNAPSHOT.war
+ENV THREDDS_WAR_URL https://github.com/nriet/thredds/releases/download/thredds-5.6-SNAPSHOT/thredds-5.6-SNAPSHOT.war
 
 COPY files/threddsConfig.xml ${CATALINA_HOME}/content/thredds/threddsConfig.xml
 COPY files/tomcat-users.xml ${CATALINA_HOME}/conf/tomcat-users.xml
