@@ -7,7 +7,7 @@ env:
   ALIYUN_REGISTRY_PASSWORD: "${{ secrets.ALIYUN_REGISTRY_PASSWORD }}"
   APP_NAME: thredds
   DOCKERHUB_REPO: nriet/thredds
-  APP_VERSION: 5.6-SNAPSHOT
+  APP_VERSION: 5.6.1-SNAPSHOT
 on:   # 配置触发workflow的事件
   push:
     branches:   # master分支有push时触发此workflow
