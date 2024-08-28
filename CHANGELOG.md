@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [5.4] - 2023-05-01
 ### Updated
+- 5.5 release of the Unidata TDS wrapped in a Docker container
+- Updated `docker-compose.yml` and `docker-compose-swarm.yml`
+
+## [5.4] - 2023-05-01
+### Updated
 - 5.4 release of the Unidata TDS wrapped in a Docker container
 - Revamped README
 - Updated netCDF to 4.9.2
