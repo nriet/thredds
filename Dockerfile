@@ -18,7 +18,7 @@ USER root
 ENV TDS_CONTENT_ROOT_PATH /usr/local/tomcat/content
 ENV THREDDS_XMX_SIZE 4G
 ENV THREDDS_XMS_SIZE 4G
-ENV THREDDS_WAR_URL https://github.com/nriet/tds/releases/download/nriet-v5.6-SNAPSHOT/thredds-5.6-SNAPSHOT.war
+ENV THREDDS_WAR_URL https://github.com/nriet/thredds/releases/download/thredds-5.6.34-SNAPSHOT/thredds-5.6.war
 ENV THREDDS_ISO_JAR_URL https://downloads.unidata.ucar.edu/tds/5.6/tds-plugin-2.4.7-SNAPSHOT-jar-with-dependencies.jar
 
 COPY files/threddsConfig.xml ${CATALINA_HOME}/content/thredds/threddsConfig.xml
