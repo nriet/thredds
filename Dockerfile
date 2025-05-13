@@ -67,7 +67,7 @@ EXPOSE 8080 8443
 WORKDIR ${CATALINA_HOME}
 
 # Inherited from parent container
-ENTRYPOINT ["/entrypoint.sh"]
+#ENTRYPOINT ["/entrypoint.sh"]
 
 # Start container
 CMD ["catalina.sh", "run"]
