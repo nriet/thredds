@@ -68,9 +68,9 @@ WORKDIR ${CATALINA_HOME}
 
 # Inherited from parent container
 #ENTRYPOINT ["/entrypoint.sh"]
-
+ENTRYPOINT ["catalina.sh", "run"]
 # Start container
-CMD ["catalina.sh", "run"]
+#CMD ["catalina.sh", "run"]
 
 HEALTHCHECK --interval=10s --timeout=3s \
 	CMD curl --fail 'http://localhost:8080/thredds/catalog.html' || exit 1
